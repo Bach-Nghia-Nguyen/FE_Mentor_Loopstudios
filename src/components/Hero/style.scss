@@ -1,0 +1,224 @@
+.HeroSection {
+  background-image: url('../../assets/images/desktop/image-hero.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff;
+  height: 700px;
+  padding-left: 120px;
+  padding-right: 120px;
+  position: relative;
+
+  .header {
+    font-family: 'Alata', sans-serif;
+    font-weight: 400;
+    width: 100%;
+    height: 150px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .navbar {
+      display: flex;
+      width: 400px;
+      justify-content: space-between;
+      .link {
+        font-size: 15px;
+        position: relative;
+
+        &::after {
+          content: '';
+          position: absolute;
+          bottom: -10px;
+          right: 0;
+          left: 0;
+          background-color: #fff;
+          width: 0px;
+          height: 2px;
+          margin: 0 auto;
+          transition: all 0.15s ease-in-out;
+        }
+
+        &:hover::after {
+          width: 20px;
+        }
+      }
+    }
+
+    .hamburger {
+      display: none;
+      cursor: pointer;
+    }
+  }
+
+  .message {
+    border: 2px solid #fff;
+    margin-top: 90px;
+    width: 680px;
+    height: 300px;
+    text-transform: uppercase;
+    font-size: 80px;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 300;
+    padding: 35px 35px;
+  }
+
+  .side-menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 100;
+    background-color: #000;
+    color: #fff;
+    padding: 30px 25px;
+    transform: translateX(-100%);
+
+    &.show {
+      transform: translateX(0);
+    }
+
+    .head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .logo {
+        width: 180px;
+      }
+      .close {
+        cursor: pointer;
+      }
+    }
+
+    .navbar {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      .link {
+        font-family: 'Josefin Sans', sans-serif;
+        font-weight: 300;
+        font-size: 32px;
+        text-transform: uppercase;
+        margin-top: 15px;
+        margin-bottom: 15px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1202px) {
+  .HeroSection {
+    .header {
+      height: 140px;
+
+      .navbar {
+        width: 350px;
+      }
+    }
+
+    .message {
+      // border: 2px solid #fff;
+      // margin-top: 90px;
+      width: 600px;
+      height: 270px;
+      font-size: 70px;
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .HeroSection {
+    .header {
+      height: 135px;
+
+      .navbar {
+        width: 330px;
+      }
+    }
+
+    .message {
+      width: 530px;
+      height: 250px;
+      font-size: 65px;
+      padding: 25px 25px;
+    }
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .HeroSection {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+}
+
+@media screen and (max-width: 755px) {
+  .HeroSection {
+    padding-left: 30px;
+    padding-right: 30px;
+    height: 900px;
+    background-image: url('../../assets/images/mobile/image-hero.jpg');
+    position: relative;
+
+    .header {
+      .navbar {
+        display: none;
+      }
+
+      .hamburger {
+        display: inline-block;
+      }
+    }
+
+    .message {
+      width: 90%;
+      font-size: 70px;
+      height: auto;
+      margin-top: 0px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}
+
+@media screen and (max-width: 585px) {
+  .HeroSection {
+    .message {
+      font-size: 60px;
+    }
+  }
+}
+
+@media screen and (max-width: 495px) {
+  .HeroSection {
+    height: 750px;
+    .message {
+      font-size: 50px;
+    }
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .HeroSection {
+    .message {
+      font-size: 40px;
+    }
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .HeroSection {
+    height: 630px;
+    padding-left: 15px;
+    padding-right: 15px;
+
+    .message {
+      width: 93%;
+    }
+  }
+}

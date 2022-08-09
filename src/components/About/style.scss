@@ -1,0 +1,151 @@
+@use 'colors';
+
+.AboutSection {
+  padding-left: 120px;
+  padding-right: 120px;
+
+  padding-top: 150px;
+  .wrapper {
+    position: relative;
+
+    .interactive {
+      width: 60%;
+      max-width: 1000px;
+    }
+
+    .info {
+      position: absolute;
+      bottom: 0;
+      left: 48.5%;
+      background-color: #fff;
+      width: 51.5%;
+      height: 310px;
+      .infoInnerWrapper {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: 90%;
+        .heading {
+          font-family: 'Josefin Sans', sans-serif;
+          font-weight: 300;
+          text-transform: uppercase;
+          font-size: 52px;
+          padding-bottom: 20px;
+        }
+
+        .description {
+          color: colors.$dark-gray;
+          font-family: 'Alata', sans-serif;
+          font-weight: 400;
+          line-height: 1.5;
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1310px) {
+  .AboutSection {
+    .wrapper {
+      .info {
+        height: 70%;
+        .infoInnerWrapper {
+          width: 95%;
+          .heading {
+            font-size: 42px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1204px) {
+  .AboutSection {
+    .wrapper {
+      .interactive {
+        width: 70%;
+      }
+
+      .info {
+        left: 45%;
+        width: 55%;
+        .infoInnerWrapper {
+          .heading {
+            font-size: 32px;
+          }
+
+          .description {
+            font-size: 15px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .AboutSection {
+    padding-left: 80px;
+    padding-right: 80px;
+    padding-top: 100px;
+    .wrapper {
+      .interactive {
+        width: 100%;
+      }
+
+      .info {
+        width: 100%;
+        height: auto;
+        position: static;
+        .infoInnerWrapper {
+          padding-top: 40px;
+          padding-left: 30px;
+          padding-right: 30px;
+          width: 100%;
+          position: static;
+          .heading {
+            font-size: 40px;
+            text-align: center;
+          }
+
+          .description {
+            text-align: center;
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 755px) {
+  .AboutSection {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
+@media screen and (max-width: 465px) {
+  .AboutSection {
+    .wrapper {
+      .info {
+        .infoInnerWrapper {
+          padding-left: 15px;
+          padding-right: 15px;
+          .heading {
+            font-size: 30px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .AboutSection {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
